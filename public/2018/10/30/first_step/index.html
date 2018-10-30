@@ -108,20 +108,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Sara">
-<meta property="og:url" content="https://sara-hy.github.io/index.html">
+  <meta name="description" content="让我们搭一个美美的博客，一起写写写吧~~~">
+<meta name="keywords" content="Tools">
+<meta property="og:type" content="article">
+<meta property="og:title" content="First Step to Establish the Blog">
+<meta property="og:url" content="https://sara-hy.github.io/2018/10/30/first_step/index.html">
 <meta property="og:site_name" content="Sara">
+<meta property="og:description" content="让我们搭一个美美的博客，一起写写写吧~~~">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-10-30T13:24:03.252Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sara">
+<meta name="twitter:title" content="First Step to Establish the Blog">
+<meta name="twitter:description" content="让我们搭一个美美的博客，一起写写写吧~~~">
 
 
 
 
 
 
-  <link rel="canonical" href="https://sara-hy.github.io/">
+  <link rel="canonical" href="https://sara-hy.github.io/2018/10/30/first_step/">
 
 
 
@@ -131,7 +136,7 @@
   };
 </script>
 
-  <title>Sara</title>
+  <title>First Step to Establish the Blog | Sara</title>
   
 
 
@@ -180,8 +185,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -218,7 +222,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
   </li>
@@ -278,9 +282,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -312,11 +316,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/30/first_step/" itemprop="url">
-                  First Step to Establish the Blog
-                </a>
+          <h1 class="post-title" itemprop="name headline">First Step to Establish the Blog
               
             
           </h1>
@@ -379,6 +379,13 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             Views:  
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
           
 
@@ -397,18 +404,24 @@
       
 
       
-        
-          <p>让我们搭一个美美的博客，一起写写写吧~~~</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/10/30/first_step/#more" rel="contents">
-                Read more &raquo;
-              </a>
-            </div>
-         
-          <!--/noindex-->
-        
+        <p>让我们搭一个美美的博客，一起写写写吧~~~</p>
+<a id="more"></a> 
+<h2 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h2><p>​    brew, hexo, Node.js</p>
+<h3 id="Hexo项目"><a href="#Hexo项目" class="headerlink" title="Hexo项目"></a>Hexo项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init           <span class="comment"># 新建博客目录</span></span><br><span class="line">$ hexo new <span class="string">"postname"</span> <span class="comment"># 生成postname.md文件</span></span><br><span class="line">$ hexo clean          <span class="comment"># 清空生成的网页</span></span><br><span class="line">$ hexo generate       <span class="comment"># 根据当前目录下文件生成静态网页</span></span><br><span class="line">$ hexo server 	      <span class="comment"># 启动服务器</span></span><br></pre></td></tr></table></figure>
+<p>通过访问localhost:4000可以在本地调试。文件目录<code>source</code>下的<code>_posts</code>中可以添加用户新增加的博客内容（Markdown语法）。</p>
+<p>More info: <a href="https://hexo.io/docs/" target="_blank" rel="noopener">Heox</a></p>
+<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<p>修改<code>Hexo</code>目录下的<code>config.yml</code>配置文件中的theme属性，将其设置为next。另外常见的Next主题中常见的属性：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">auto_excerpt:   <span class="comment"># 可通过 &lt;!-- more --&gt; 标签自动截断, 增加阅读全文按钮。</span></span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  length: 150</span><br><span class="line"></span><br><span class="line">busuanzi_count: <span class="comment"># 监听网页浏览量。</span></span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="添加新的导航栏"><a href="#添加新的导航栏" class="headerlink" title="添加新的导航栏"></a>添加新的导航栏</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags   <span class="comment"># 添加tags标签页</span></span><br></pre></td></tr></table></figure>
+<p>修改<code>source</code>目录下的<code>tags</code>中的<code>index.md</code>如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-10-30 17:23:49</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>在菜单中添加链接。编辑<code>Hexo</code>目录下的<code>config.yml</code>配置文件中的menu属性，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags : /tags</span><br></pre></td></tr></table></figure>
+<h3 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a>部署到github</h3><p>修改<code>Hexo</code> 目录下的<code>config.yml</code> 配置文件中的deploy属性：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git </span><br><span class="line">  repo: https://github.com/<span class="built_in">test</span>/test.github.io.git  <span class="comment"># github路径</span></span><br></pre></td></tr></table></figure>
+<p>通过下面的指令实现部署：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
+<h3 id="Google收录博客网站"><a href="#Google收录博客网站" class="headerlink" title="Google收录博客网站"></a>Google收录博客网站</h3><p>skip_render: google10bb50e0b38f396b.html</p>
+
       
     </div>
 
@@ -426,14 +439,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Tools/" rel="tag"># Tools</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -443,14 +462,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -471,8 +491,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -543,6 +572,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo项目"><span class="nav-number">1.1.</span> <span class="nav-text">Hexo项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改主题"><span class="nav-number">1.2.</span> <span class="nav-text">修改主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加新的导航栏"><span class="nav-number">1.3.</span> <span class="nav-text">添加新的导航栏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署到github"><span class="nav-number">1.4.</span> <span class="nav-text">部署到github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Google收录博客网站"><span class="nav-number">1.5.</span> <span class="nav-text">Google收录博客网站</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -691,6 +736,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
 
   
 
