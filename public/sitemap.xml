@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://sara-hy.github.io/2018/11/02/intent_slot/</loc>
+    
+    <lastmod>2018-11-02T06:32:57.033Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://sara-hy.github.io/2018/10/30/first_step/</loc>
     
     <lastmod>2018-10-30T13:24:03.252Z</lastmod>
@@ -16,14 +23,14 @@
   </url>
   
   <url>
-    <loc>https://sara-hy.github.io/tags/index.html</loc>
+    <loc>https://sara-hy.github.io/categories/index.html</loc>
     
     <lastmod>2018-10-30T10:18:42.174Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://sara-hy.github.io/categories/index.html</loc>
+    <loc>https://sara-hy.github.io/tags/index.html</loc>
     
     <lastmod>2018-10-30T10:18:42.174Z</lastmod>
     

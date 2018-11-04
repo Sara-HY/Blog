@@ -33,7 +33,7 @@ More info: [Heox](https://hexo.io/docs/)
 $ git clone https://github.com/theme-next/hexo-theme-next themes/next
 ```
 
-修改`Hexo`目录下的`config.yml`配置文件中的theme属性，将其设置为next。另外常见的Next主题中常见的属性：
+修改`config.yml`配置文件中的theme属性，将其设置为next。另外常见的Next主题中常见的属性：
 ``` bash
 auto_excerpt:   # 可通过 <!-- more --> 标签自动截断, 增加阅读全文按钮。
   enable: true
@@ -59,7 +59,7 @@ type: "tags"
 ---
 ```
 
-在菜单中添加链接。编辑`Hexo`目录下的`config.yml`配置文件中的menu属性，如下：
+在菜单中添加链接。编辑`config.yml`配置文件中的menu属性，如下：
 
 ```
 menu:
@@ -68,9 +68,9 @@ menu:
   tags : /tags
 ```
 
-### 部署到github
+### 部署到 Github
 
-修改`Hexo` 目录下的`config.yml` 配置文件中的deploy属性：
+修改`config.yml`配置文件中的deploy属性：
 
 ``` bash
 deploy:
@@ -84,11 +84,25 @@ $ npm install hexo-deployer-git --save
 $ hexo deploy
 ```
 
-### Google收录博客网站
+### Google 收录博客网站
 
+1. 添加站点：用自己的 Google 帐号登陆 [Webmaster Central](https://www.google.com/webmasters/verification/home?hl=en)。
 
-
+2. 验证站点: 将网站上的验证文件放在 `source` 文件下，在站点配置文件配置如下：
+``` bash
 skip_render: google10bb50e0b38f396b.html
+```
 
+3. 产生 sitemap：借助  hexo-generator-sitemap 工具自动生成，并在`config.yml`里配置一下：
+``` bash
+npm install hexo-generator-sitemap --save
+```
+	``` bash
+	sitemap:
+	    path: sitemap.xml
+	```
 
-
+4. 重新编译生成
+``` bash
+hexo generate
+```
