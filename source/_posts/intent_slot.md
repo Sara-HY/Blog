@@ -101,7 +101,7 @@ session ID    用户query              意图                       语义槽标
 
 ## 英文数据集
 
-### Frame
+### [Frame](https://datasets.maluuba.com/Frames/dl)
 
 #### 数据描述 [4]
 这个数据集主要针对航班和酒店预订，来源于基于Wizard-of-Oz(WOz)设定的人机对话的过程（实际上是一个人假扮机器）。其中包括 **1369** 个对话, 总共有 **19986** 轮。
@@ -171,7 +171,7 @@ session ID    用户query              意图                       语义槽标
 **结果**：这个模型在基于槽分类的准确度为76.43 ± 4.49，基于行动Act分类的准确度为95.66 ± 2.34。
 
 
-### DSTC (Dialog State Tracking Challenge) [6, 7]
+### [DSTC](https://www.microsoft.com/en-us/research/event/dialog-state-tracking-challenge/) (Dialog State Tracking Challenge) [6, 7]
 
 #### 数据描述
 DSTC 是针对一系列的对话数据，完成对话跟踪的任务。也就是针对每一个数据集，意在可以根据之前的状态来预测新的对话的状态。目前DSTC数据已经更新到DSCT6，下面将简单介绍各个版本的数据。

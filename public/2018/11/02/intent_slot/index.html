@@ -124,7 +124,7 @@
 <meta property="og:image" content="https://sara-hy.github.io/images/intent_frame_baseline.png">
 <meta property="og:image" content="https://sara-hy.github.io/images/intent_frame_model.png">
 <meta property="og:image" content="https://sara-hy.github.io/images/intent_dstc_rnn.png">
-<meta property="og:updated_time" content="2018-11-05T08:34:59.510Z">
+<meta property="og:updated_time" content="2018-11-05T10:44:30.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Review on Intent Classification and Slot Filling">
 <meta name="twitter:description" content="自然语言理解（Natural Language Understanding, NLU）是NLP领域的一个分支，在自然语言理解的过程中，首先就是对意图（Intent）分类，然后接着对槽位（Slot）填充。">
@@ -367,7 +367,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-11-05 16:34:59" itemprop="dateModified" datetime="2018-11-05T16:34:59+08:00">2018-11-05</time>
+                <time title="Modified: 2018-11-05 18:44:30" itemprop="dateModified" datetime="2018-11-05T18:44:30+08:00">2018-11-05</time>
               
             
           </span>
@@ -466,7 +466,7 @@
 </ol>
 <p>注：由于训练样本比较少，针对模型预测错误的数据，他们根据比较query与Sogou语音中最匹配的进行替换，最终针对意图分类增加了500个数据，槽填充增加了1000个数据。</p>
 <p><strong>结果</strong>：这个模型在两个评估方法的结果最终为96.11%，94.49%。</p>
-<h2 id="英文数据集"><a href="#英文数据集" class="headerlink" title="英文数据集"></a>英文数据集</h2><h3 id="Frame"><a href="#Frame" class="headerlink" title="Frame"></a>Frame</h3><h4 id="数据描述-4"><a href="#数据描述-4" class="headerlink" title="数据描述 [4]"></a>数据描述 [4]</h4><p>这个数据集主要针对航班和酒店预订，来源于基于Wizard-of-Oz(WOz)设定的人机对话的过程（实际上是一个人假扮机器）。其中包括 <strong>1369</strong> 个对话, 总共有 <strong>19986</strong> 轮。</p>
+<h2 id="英文数据集"><a href="#英文数据集" class="headerlink" title="英文数据集"></a>英文数据集</h2><h3 id="Frame"><a href="#Frame" class="headerlink" title="Frame"></a><a href="https://datasets.maluuba.com/Frames/dl" target="_blank" rel="noopener">Frame</a></h3><h4 id="数据描述-4"><a href="#数据描述-4" class="headerlink" title="数据描述 [4]"></a>数据描述 [4]</h4><p>这个数据集主要针对航班和酒店预订，来源于基于Wizard-of-Oz(WOz)设定的人机对话的过程（实际上是一个人假扮机器）。其中包括 <strong>1369</strong> 个对话, 总共有 <strong>19986</strong> 轮。</p>
 <p><strong>数据格式</strong><br>每一次叙述都包含 ‘author’, ‘text’, ‘labels’, ‘timestamp’, ‘frames’(‘frame id’, ‘frame parent id’, ‘requests, binary questions, compare requests’, ‘info’), ‘db’字段。其中 ‘labels’记录当前的active_frame以及对话过程中的Act(包括act名称以及对应的slot类型和值)， ‘info’字段主要为了标注对于槽位值是否为否定的。</p>
 <p><strong>Act类型</strong>：inform, offer, request, switch frame, suggest, no result, thankyou, goodbye…..</p>
 <h4 id="评估方法-1"><a href="#评估方法-1" class="headerlink" title="评估方法"></a>评估方法</h4><p>微软在提出这个数据集的同时，也定义了一个任务Frame Tracking，这个任务与State Tracking不同的是，它可以同时追踪一个frame与之前几轮相关的frame，以及由一个frame转变到多个frame，例如用户要求系统可以推荐4个符合条件的旅行，如下图所示：</p>
@@ -510,7 +510,7 @@
 </ol>
 <p><strong>注</strong>：这里没有详细介绍实验的一些完善trick，如模型图中的\(g_c\)， \(g_n\)， \(h_d\)， \(h_c\)，详情请看论文。</p>
 <p><strong>结果</strong>：这个模型在基于槽分类的准确度为76.43 ± 4.49，基于行动Act分类的准确度为95.66 ± 2.34。</p>
-<h3 id="DSTC-Dialog-State-Tracking-Challenge-6-7"><a href="#DSTC-Dialog-State-Tracking-Challenge-6-7" class="headerlink" title="DSTC (Dialog State Tracking Challenge) [6, 7]"></a>DSTC (Dialog State Tracking Challenge) [6, 7]</h3><h4 id="数据描述"><a href="#数据描述" class="headerlink" title="数据描述"></a>数据描述</h4><p>DSTC 是针对一系列的对话数据，完成对话跟踪的任务。也就是针对每一个数据集，意在可以根据之前的状态来预测新的对话的状态。目前DSTC数据已经更新到DSCT6，下面将简单介绍各个版本的数据。</p>
+<h3 id="DSTC-Dialog-State-Tracking-Challenge-6-7"><a href="#DSTC-Dialog-State-Tracking-Challenge-6-7" class="headerlink" title="DSTC (Dialog State Tracking Challenge) [6, 7]"></a><a href="https://www.microsoft.com/en-us/research/event/dialog-state-tracking-challenge/" target="_blank" rel="noopener">DSTC</a> (Dialog State Tracking Challenge) [6, 7]</h3><h4 id="数据描述"><a href="#数据描述" class="headerlink" title="数据描述"></a>数据描述</h4><p>DSTC 是针对一系列的对话数据，完成对话跟踪的任务。也就是针对每一个数据集，意在可以根据之前的状态来预测新的对话的状态。目前DSTC数据已经更新到DSCT6，下面将简单介绍各个版本的数据。</p>
 <ul>
 <li><p>DSTC 1<br>这个数据集包括城市BUS的预定电话中的对话数据。<strong>12963</strong>轮训练数据，<strong>2485</strong>轮测试数据。</p>
 </li>
