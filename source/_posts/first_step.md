@@ -2,7 +2,7 @@
 title: First Step to Establish the Blog
 categories: Note
 tags:
-  - Tools
+  - tools
 ---
 
 让我们搭一个美美的博客，一起写写写吧~~~
