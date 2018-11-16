@@ -1,7 +1,10 @@
 ---
 title: Review on Intent Classification and Slot Filling
 date: 2018-11-02 10:41:02
-tags: Research
+categories: Research
+tags: 
+  - intent
+  - slot 
 ---
 
 自然语言理解（Natural Language Understanding, NLU）是NLP领域的一个分支，在自然语言理解的过程中，首先就是对意图（Intent）分类，然后接着对槽位（Slot）填充。

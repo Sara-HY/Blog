@@ -108,25 +108,34 @@
 
 
 
-  <meta name="description" content="让我们搭一个美美的博客，一起写写写吧~~~">
-<meta name="keywords" content="Tools">
+  <meta name="description" content="面向任务的对话（Task-oriented Dialog）主要关注在某些特定的领域，用户带有目的的发起的会话。本文将从一个具体的数据集出发，结合基于此数据集设计的不同的系统来具体的分析对于此类任务的the-State-of-Art。">
+<meta name="keywords" content="intent,slot,task-oriented">
 <meta property="og:type" content="article">
-<meta property="og:title" content="First Step to Establish the Blog">
-<meta property="og:url" content="https://sara-hy.github.io/2018/10/30/first_step/index.html">
+<meta property="og:title" content="Task-Oriented Dialog System">
+<meta property="og:url" content="https://sara-hy.github.io/2018/11/15/task-oriented-dialog-systems/index.html">
 <meta property="og:site_name" content="Sara">
-<meta property="og:description" content="让我们搭一个美美的博客，一起写写写吧~~~">
+<meta property="og:description" content="面向任务的对话（Task-oriented Dialog）主要关注在某些特定的领域，用户带有目的的发起的会话。本文将从一个具体的数据集出发，结合基于此数据集设计的不同的系统来具体的分析对于此类任务的the-State-of-Art。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-04T09:11:11.814Z">
+<meta property="og:image" content="https://sara-hy.github.io/images/diag_example.png">
+<meta property="og:image" content="https://sara-hy.github.io/images/diag_statistics.png">
+<meta property="og:image" content="https://sara-hy.github.io/images/diag_statistics2.png">
+<meta property="og:image" content="https://sara-hy.github.io/images/diag_kv_retrieval.png">
+<meta property="og:image" content="https://sara-hy.github.io/images/diag_kv_retrieval_result.png">
+<meta property="og:image" content="https://sara-hy.github.io/images/mem2seq.png">
+<meta property="og:image" content="https://sara-hy.github.io/images/mem2seq_result.png">
+<meta property="og:image" content="https://sara-hy.github.io/images/mem2seq_result2.png">
+<meta property="og:updated_time" content="2018-11-16T05:13:34.302Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="First Step to Establish the Blog">
-<meta name="twitter:description" content="让我们搭一个美美的博客，一起写写写吧~~~">
+<meta name="twitter:title" content="Task-Oriented Dialog System">
+<meta name="twitter:description" content="面向任务的对话（Task-oriented Dialog）主要关注在某些特定的领域，用户带有目的的发起的会话。本文将从一个具体的数据集出发，结合基于此数据集设计的不同的系统来具体的分析对于此类任务的the-State-of-Art。">
+<meta name="twitter:image" content="https://sara-hy.github.io/images/diag_example.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://sara-hy.github.io/2018/10/30/first_step/">
+  <link rel="canonical" href="https://sara-hy.github.io/2018/11/15/task-oriented-dialog-systems/">
 
 
 
@@ -136,7 +145,7 @@
   };
 </script>
 
-  <title>First Step to Establish the Blog | Sara</title>
+  <title>Task-Oriented Dialog System | Sara</title>
   
 
 
@@ -299,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sara-hy.github.io/2018/10/30/first_step/">
+    <link itemprop="mainEntityOfPage" href="https://sara-hy.github.io/2018/11/15/task-oriented-dialog-systems/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sara Han">
@@ -316,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">First Step to Establish the Blog
+          <h1 class="post-title" itemprop="name headline">Task-Oriented Dialog System
               
             
           </h1>
@@ -341,7 +350,7 @@
                 
               
 
-              <time title="Created: 2018-10-30 18:18:42" itemprop="dateCreated datePublished" datetime="2018-10-30T18:18:42+08:00">2018-10-30</time>
+              <time title="Created: 2018-11-15 17:37:35" itemprop="dateCreated datePublished" datetime="2018-11-15T17:37:35+08:00">2018-11-15</time>
             
 
             
@@ -358,7 +367,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-11-04 17:11:11" itemprop="dateModified" datetime="2018-11-04T17:11:11+08:00">2018-11-04</time>
+                <time title="Modified: 2018-11-16 13:13:34" itemprop="dateModified" datetime="2018-11-16T13:13:34+08:00">2018-11-16</time>
               
             
           </span>
@@ -375,7 +384,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Note/" itemprop="url" rel="index"><span itemprop="name">Note</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Research/" itemprop="url" rel="index"><span itemprop="name">Research</span></a></span>
 
                 
                 
@@ -416,36 +425,48 @@
       
 
       
-        <p>让我们搭一个美美的博客，一起写写写吧~~~</p>
-<a id="more"></a> 
-<h2 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h2><p>​    brew, hexo, Node.js</p>
-<h3 id="Hexo项目"><a href="#Hexo项目" class="headerlink" title="Hexo项目"></a>Hexo项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init           <span class="comment"># 新建博客目录</span></span><br><span class="line">$ hexo new <span class="string">"postname"</span> <span class="comment"># 生成postname.md文件</span></span><br><span class="line">$ hexo clean          <span class="comment"># 清空生成的网页</span></span><br><span class="line">$ hexo generate       <span class="comment"># 根据当前目录下文件生成静态网页</span></span><br><span class="line">$ hexo server 	      <span class="comment"># 启动服务器</span></span><br></pre></td></tr></table></figure>
-<p>通过访问localhost:4000可以在本地调试。文件目录<code>source</code>下的<code>_posts</code>中可以添加用户新增加的博客内容（Markdown语法）。</p>
-<p>More info: <a href="https://hexo.io/docs/" target="_blank" rel="noopener">Heox</a></p>
-<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<p>修改<code>config.yml</code>配置文件中的theme属性，将其设置为next。另外常见的Next主题中常见的属性：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">auto_excerpt:   <span class="comment"># 可通过 &lt;!-- more --&gt; 标签自动截断, 增加阅读全文按钮。</span></span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  length: 150</span><br><span class="line"></span><br><span class="line">busuanzi_count: <span class="comment"># 监听网页浏览量。</span></span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="添加新的导航栏"><a href="#添加新的导航栏" class="headerlink" title="添加新的导航栏"></a>添加新的导航栏</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags   <span class="comment"># 添加tags标签页</span></span><br></pre></td></tr></table></figure>
-<p>修改<code>source</code>目录下的<code>tags</code>中的<code>index.md</code>如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-10-30 17:23:49</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>在菜单中添加链接。编辑<code>config.yml</code>配置文件中的menu属性，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags : /tags</span><br></pre></td></tr></table></figure>
-<h3 id="部署到-Github"><a href="#部署到-Github" class="headerlink" title="部署到 Github"></a>部署到 Github</h3><p>修改<code>config.yml</code>配置文件中的deploy属性：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git </span><br><span class="line">  repo: https://github.com/<span class="built_in">test</span>/test.github.io.git  <span class="comment"># github路径</span></span><br></pre></td></tr></table></figure>
-<p>通过下面的指令实现部署：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-<h3 id="Google-收录博客网站"><a href="#Google-收录博客网站" class="headerlink" title="Google 收录博客网站"></a>Google 收录博客网站</h3><ol>
-<li><p>添加站点：用自己的 Google 帐号登陆 <a href="https://www.google.com/webmasters/verification/home?hl=en" target="_blank" rel="noopener">Webmaster Central</a>。</p>
+        <p>面向任务的对话（Task-oriented Dialog）主要关注在某些特定的领域，用户带有目的的发起的会话。本文将从一个具体的数据集出发，结合基于此数据集设计的不同的系统来具体的分析对于此类任务的the-State-of-Art。</p>
+<a id="more"></a>
+<h4 id="数据集-In-Car-DataSet"><a href="#数据集-In-Car-DataSet" class="headerlink" title="数据集 In-Car DataSet"></a><a href="https://nlp.stanford.edu/blog/a-new-multi-turn-multi-domain-task-oriented-dialogue-dataset/" target="_blank" rel="noopener">数据集 In-Car DataSet</a></h4><p>数据集 In-Car DataSet，是用户和车载助手对于日程安排，天气和导航三个领域进行的多轮对话，下面是一个对话例子：</p>
+<div align="center"><br>    <img src="/images/diag_example.png" width="600" align="center/"><br></div>
+
+<p>这个数据集中总共有3031次对话，具体信息如下：</p>
+<div align="center"><br>    <img src="/images/diag_statistics.png" width="600" align="center/"><br></div>
+
+<p>其中针对3个不同的领域，日程安排，天气和导航，具有不同的槽类型以及槽值：</p>
+<div align="center"><br>    <img src="/images/diag_statistics2.png" width="600" align="center/"><br></div>
+
+<p>特别地，此数据中认为后台已经有一个知识库（Knowledge Base）。即用户提出请求后，系统会在这个知识库中找到匹配的答案，最终生成相应的答案。下面是两个基于此数据集的对话系统。</p>
+<h4 id="Key-Value-Retrieval-Networks-1"><a href="#Key-Value-Retrieval-Networks-1" class="headerlink" title="Key Value Retrieval Networks [1]"></a>Key Value Retrieval Networks [1]</h4><p>这个模型是针对此数据集提出的 baseline，将<strong>End-to-End模型</strong>与<strong>信息检索模型</strong>结合。</p>
+<div align="center"><br>    <img src="/images/diag_kv_retrieval.png" width="600" align="center/"><br></div>
+
+<ul>
+<li><p>Encoder - LSTM<br>输入：历史对话，\((u_1, s_1, …, s_{i-1}, u_i)\)<br>Hidden State: \(h_i\)</p>
 </li>
-<li><p>验证站点: 将网站上的验证文件放在 <code>source</code> 文件下，在站点配置文件配置如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: google10bb50e0b38f396b.html</span><br></pre></td></tr></table></figure>
+<li><p>Decoder<br>输入：\(h_i\)<br>Hidden State: \(\tilde{h_{t}}\)<br>输出：\(y_1, y_2, …, y_n\)<br>其中，在decoder的过程中，结合了Attention机制，来给知识库中不同的KB entry给予不同的权重。</p>
 </li>
-<li><p>产生 sitemap：借助  hexo-generator-sitemap 工具自动生成，并在<code>config.yml</code>里配置一下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">    path: sitemap.xml</span><br></pre></td></tr></table></figure>
+<li><p>Attention<br>在知识库（Knowledege）中，每个entry表示为（subject, relation, objective）。在模型中，将每个entry表示为<strong>subject</strong>和<strong>relation</strong>的embedding的和\(k_j\)。具体的attention计算过程如下：<br>\[u_i^t = w^T tanh(W_2 tanh(W_1[h_i, \tilde{h_{t}}]))\] \[a_i^t = softmax(u_i^t)\]\[\tilde{h_{t}}^{,} = a_i^t h_i\]\[u_j^t = r^T tanh(W_2 tanh(W_1[k_j, \tilde{h_{t}}]))\]\[o_t = U[\tilde{h_{t}}, \tilde{h_{t}}^{,}] + \tilde{v_{t}}\]\[y_t = Softmax(o_t)\]<br>其中，\(\tilde{v_t}\)维度为|V| + n，|V|为词典长度，n表示为指知识库中entry的个数。需要特别注意的是，本文通过NER将知识库中具体的“槽值”替换为“槽类型”（如，“5pm”替换为“meeting_time”），这样就使得词典的长度大大减少。\(\tilde{v_t}\)中与知识库中相关的表示为\(u_j^t\)，其与为0，即加重网络在知识库上的权重。总的来说，我们可以将\(v_t\)看做是分别在原始词典和知识库上的概率分布，通过两者来确定最终的输出。最终的实验结果如下:</p>
+<div align="center"><br>  <img src="/images/diag_kv_retrieval_result.png" width="600" align="center/"><br></div>
+
 </li>
-<li><p>重新编译生成</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
+</ul>
+<h4 id="Mem2Seq-2"><a href="#Mem2Seq-2" class="headerlink" title="Mem2Seq [2]"></a>Mem2Seq [2]</h4><p>这篇文章主要结合End-to-End memory network和Pointer network的思想。其中MemNN是将memory和question进行embedding，然后计算两者的匹配度；接着对memory进行另一种embedding之后，以匹配度作为权重得到输出；再结合question，通过softmax得到最终的answer。而Pointer network没有关注在输出，而是通过计算encoder和decoder的匹配度之后，直接根据其softmax值指向输入的某个部分，从输入序列里“提取”一些元素来输出。</p>
+<div align="center"><br>    <img src="/images/mem2seq.png" width="600" align="center/"><br></div>
+
+<ul>
+<li><p>Encoder - Multi-hop MemNN<br>输入：U = [B; X]，其中X = {x1, …, xn, \$} 为对话历史，包括时间信息和用户信息（如“hello”表示为“hello t1 \$u”），\$表示结束；B = {b1, …, bl}表示知识库。<br>输出：\(o_k\)</p>
+<p>\[ p_k^i = Softmax(q_k)^T C_i^k\] \[o_k = \sum p_k C_{k+1}\] \[q_{k+1} = q_k + o_k\]</p>
+<p>一般的MemNN过程，其中\(C_i\)为Encoder的memory。</p>
 </li>
-</ol>
+<li><p>Decoder - GRU + MemNN<br>输入：\(o_k\)<br>HiddenState：\(h_t\)<br>输出：\(P_{vocab}(\hat{y_t}), P_{ptr}\)</p>
+<p>\[P_{vocab}(\hat{y_t}) = Softmax(W_1[h_t; o^1])\] \[P_{ptr} = p_t^K \]</p>
+<p>其中，\(P_{vocab}(\hat{y_t})\)结合第一个hop的输出得到输出词在词典上的分布，\(P_{ptr}\)是Decoder中MemNN的最后一个hop的\(p_t^K\)表示（此处K=3），可以看做是在对话历史和知识库上的分布。当生成的词为“\$”时，则从词典中选择词语作为输出，否则则在对话历史或者知识库中选择词作为输出。最终的实验结果如下:</p>
+<div align="center"><br>  <img src="/images/mem2seq_result.png" width="600" align="center/"><br></div><br>下面是一个具体的生成案例：<br><div align="center"><br>  <img src="/images/mem2seq_result2.png" width="800" align="center/"><br></div>
+
+</li>
+</ul>
+<p>&nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;</p>
+<p>[1] Key-Value Retrieval Networks for Task-Oriented Dialogue.<br>[2] Mem2Seq: Effectively Incorporating Knowledge Bases into End-to-End Task-Oriented Dialog Systems.</p>
 
       
     </div>
@@ -466,7 +487,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Tools/" rel="tag"># Tools</a>
+            <a href="/tags/intent/" rel="tag"># intent</a>
+          
+            <a href="/tags/slot/" rel="tag"># slot</a>
+          
+            <a href="/tags/task-oriented/" rel="tag"># task-oriented</a>
           
         </div>
       
@@ -479,15 +504,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/11/02/intent_slot/" rel="next" title="Review on Intent Classification and Slot Filling">
+                <i class="fa fa-chevron-left"></i> Review on Intent Classification and Slot Filling
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/02/intent_slot/" rel="prev" title="Review on Intent Classification and Slot Filling">
-                Review on Intent Classification and Slot Filling <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -631,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo项目"><span class="nav-number">1.1.</span> <span class="nav-text">Hexo项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改主题"><span class="nav-number">1.2.</span> <span class="nav-text">修改主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加新的导航栏"><span class="nav-number">1.3.</span> <span class="nav-text">添加新的导航栏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署到-Github"><span class="nav-number">1.4.</span> <span class="nav-text">部署到 Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-收录博客网站"><span class="nav-number">1.5.</span> <span class="nav-text">Google 收录博客网站</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据集-In-Car-DataSet"><span class="nav-number">1.</span> <span class="nav-text">数据集 In-Car DataSet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Key-Value-Retrieval-Networks-1"><span class="nav-number">2.</span> <span class="nav-text">Key Value Retrieval Networks [1]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mem2Seq-2"><span class="nav-number">3.</span> <span class="nav-text">Mem2Seq [2]</span></a></li></ol></div>
             
 
           </div>
