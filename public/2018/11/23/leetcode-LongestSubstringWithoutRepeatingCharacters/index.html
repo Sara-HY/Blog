@@ -108,25 +108,27 @@
 
 
 
-  <meta name="description" content="让我们搭一个美美的博客，一起写写写吧~~~">
-<meta name="keywords" content="tools">
+  <meta name="description" content="Longest Substring Without Repeating CharactersGiven a string, find the length of the longest substring without repeating characters.（字符串中的最大不重复子串）">
+<meta name="keywords" content="string,hash table,dynamic programming">
 <meta property="og:type" content="article">
-<meta property="og:title" content="First Step to Establish the Blog">
-<meta property="og:url" content="https://sara-hy.github.io/2018/10/30/first_step/index.html">
+<meta property="og:title" content="LeetCode_Longest Substring Without Repeating Characters">
+<meta property="og:url" content="https://sara-hy.github.io/2018/11/23/leetcode-LongestSubstringWithoutRepeatingCharacters/index.html">
 <meta property="og:site_name" content="Sara">
-<meta property="og:description" content="让我们搭一个美美的博客，一起写写写吧~~~">
+<meta property="og:description" content="Longest Substring Without Repeating CharactersGiven a string, find the length of the longest substring without repeating characters.（字符串中的最大不重复子串）">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-16T05:17:29.774Z">
+<meta property="og:image" content="https://sara-hy.github.io/images/leetcode_3.png">
+<meta property="og:updated_time" content="2018-11-23T09:02:48.084Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="First Step to Establish the Blog">
-<meta name="twitter:description" content="让我们搭一个美美的博客，一起写写写吧~~~">
+<meta name="twitter:title" content="LeetCode_Longest Substring Without Repeating Characters">
+<meta name="twitter:description" content="Longest Substring Without Repeating CharactersGiven a string, find the length of the longest substring without repeating characters.（字符串中的最大不重复子串）">
+<meta name="twitter:image" content="https://sara-hy.github.io/images/leetcode_3.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://sara-hy.github.io/2018/10/30/first_step/">
+  <link rel="canonical" href="https://sara-hy.github.io/2018/11/23/leetcode-LongestSubstringWithoutRepeatingCharacters/">
 
 
 
@@ -136,7 +138,7 @@
   };
 </script>
 
-  <title>First Step to Establish the Blog | Sara</title>
+  <title>LeetCode_Longest Substring Without Repeating Characters | Sara</title>
   
 
 
@@ -299,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sara-hy.github.io/2018/10/30/first_step/">
+    <link itemprop="mainEntityOfPage" href="https://sara-hy.github.io/2018/11/23/leetcode-LongestSubstringWithoutRepeatingCharacters/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sara Han">
@@ -316,7 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">First Step to Establish the Blog
+          <h1 class="post-title" itemprop="name headline">LeetCode_Longest Substring Without Repeating Characters
               
             
           </h1>
@@ -341,24 +343,12 @@
                 
               
 
-              <time title="Created: 2018-10-30 18:18:42" itemprop="dateCreated datePublished" datetime="2018-10-30T18:18:42+08:00">2018-10-30</time>
+              <time title="Created: 2018-11-23 14:33:59 / Modified: 17:02:48" itemprop="dateCreated datePublished" datetime="2018-11-23T14:33:59+08:00">2018-11-23</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-11-16 13:17:29" itemprop="dateModified" datetime="2018-11-16T13:17:29+08:00">2018-11-16</time>
               
             
           </span>
@@ -375,7 +365,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Note/" itemprop="url" rel="index"><span itemprop="name">Note</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
 
                 
                 
@@ -416,36 +406,18 @@
       
 
       
-        <p>让我们搭一个美美的博客，一起写写写吧~~~</p>
-<a id="more"></a> 
-<h2 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h2><p>​    brew, hexo, Node.js</p>
-<h3 id="Hexo项目"><a href="#Hexo项目" class="headerlink" title="Hexo项目"></a>Hexo项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init           <span class="comment"># 新建博客目录</span></span><br><span class="line">$ hexo new <span class="string">"postname"</span> <span class="comment"># 生成postname.md文件</span></span><br><span class="line">$ hexo clean          <span class="comment"># 清空生成的网页</span></span><br><span class="line">$ hexo generate       <span class="comment"># 根据当前目录下文件生成静态网页</span></span><br><span class="line">$ hexo server 	      <span class="comment"># 启动服务器</span></span><br></pre></td></tr></table></figure>
-<p>通过访问localhost:4000可以在本地调试。文件目录<code>source</code>下的<code>_posts</code>中可以添加用户新增加的博客内容（Markdown语法）。</p>
-<p>More info: <a href="https://hexo.io/docs/" target="_blank" rel="noopener">Heox</a></p>
-<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<p>修改<code>config.yml</code>配置文件中的theme属性，将其设置为next。另外常见的Next主题中常见的属性：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">auto_excerpt:   <span class="comment"># 可通过 &lt;!-- more --&gt; 标签自动截断, 增加阅读全文按钮。</span></span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  length: 150</span><br><span class="line"></span><br><span class="line">busuanzi_count: <span class="comment"># 监听网页浏览量。</span></span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="添加新的导航栏"><a href="#添加新的导航栏" class="headerlink" title="添加新的导航栏"></a>添加新的导航栏</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags   <span class="comment"># 添加tags标签页</span></span><br></pre></td></tr></table></figure>
-<p>修改<code>source</code>目录下的<code>tags</code>中的<code>index.md</code>如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-10-30 17:23:49</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>在菜单中添加链接。编辑<code>config.yml</code>配置文件中的menu属性，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags : /tags</span><br></pre></td></tr></table></figure>
-<h3 id="部署到-Github"><a href="#部署到-Github" class="headerlink" title="部署到 Github"></a>部署到 Github</h3><p>修改<code>config.yml</code>配置文件中的deploy属性：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git </span><br><span class="line">  repo: https://github.com/<span class="built_in">test</span>/test.github.io.git  <span class="comment"># github路径</span></span><br></pre></td></tr></table></figure>
-<p>通过下面的指令实现部署：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-<h3 id="Google-收录博客网站"><a href="#Google-收录博客网站" class="headerlink" title="Google 收录博客网站"></a>Google 收录博客网站</h3><ol>
-<li><p>添加站点：用自己的 Google 帐号登陆 <a href="https://www.google.com/webmasters/verification/home?hl=en" target="_blank" rel="noopener">Webmaster Central</a>。</p>
-</li>
-<li><p>验证站点: 将网站上的验证文件放在 <code>source</code> 文件下，在站点配置文件配置如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: google10bb50e0b38f396b.html</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>产生 sitemap：借助  hexo-generator-sitemap 工具自动生成，并在<code>config.yml</code>里配置一下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">    path: sitemap.xml</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重新编译生成</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+        <h2 id="Longest-Substring-Without-Repeating-Characters"><a href="#Longest-Substring-Without-Repeating-Characters" class="headerlink" title="Longest Substring Without Repeating Characters"></a><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank" rel="noopener">Longest Substring Without Repeating Characters</a></h2><p>Given a string, find the length of the longest substring without repeating characters.<br>（字符串中的最大不重复子串）</p>
+<a id="more"></a>
+<p><strong>Example:</strong> </p>
+<div align="center"><br>    <img src="/images/leetcode_3.png" width="500" align="center/"><br></div>
+
+
+<h3 id="1-暴力循环"><a href="#1-暴力循环" class="headerlink" title="1. 暴力循环"></a>1. 暴力循环</h3><p>对字符串进行两轮循环，并在循环的过程中判断两个指针之间的字符串是否包含了重复的字符。其时间复杂度为 \(O(n^3)\)。在测试过程中会 Time Limit Exceeded。</p>
+<h3 id="2-移动窗口-动态规划"><a href="#2-移动窗口-动态规划" class="headerlink" title="2. 移动窗口 / 动态规划"></a>2. 移动窗口 / 动态规划</h3><p>这道题是字符串中的很典型的 DP 问题。构建两个指针i和j，当指针j+1所指的元素在[i, j]中没有出现时，这时的字符串为[i, j+1]；当指针j+1所指的元素在[i, j]中有出现时，这时的字符串为[i+1, j]。另外，构建了一个字典来快速判断元素是否在子串中出现。其时间复杂度为 \(O(2n)\)。具体实现过程如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def lengthOfLongestSubstring(self, s):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type s: str</span><br><span class="line">        :rtype: int</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        d = &#123;&#125;</span><br><span class="line">        long = 0</span><br><span class="line">        i = 0</span><br><span class="line">        j = 0</span><br><span class="line">        </span><br><span class="line">        while(i &lt; len(s) and j &lt; len(s)):</span><br><span class="line">            if (s[j] not in d) or (d[s[j]] == 0):</span><br><span class="line">                d[s[j]] = 1</span><br><span class="line">                j += 1</span><br><span class="line">                long = max(long, j-i)</span><br><span class="line">            else:</span><br><span class="line">                d[s[i]] = 0</span><br><span class="line">                i += 1 </span><br><span class="line">        return long</span><br></pre></td></tr></table></figure>
+<p>上面那个方法需要对整个字符串遍历两次，另外一种思路就是在字典dict中保存的是字符最后一次出现的下一个元素。指针j来遍历整个字符串，指针i来维护[0, j]中所有字符中最后一次出现的下一个元素，于是[i, j]就是最大不重复子串。其时间复杂度为 \(O(n)\)。具体实现过程如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def lengthOfLongestSubstring(self, s):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type s: str</span><br><span class="line">        :rtype: int</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        d = &#123;&#125;</span><br><span class="line">        i = 0</span><br><span class="line">        j = 0</span><br><span class="line">        long = 0</span><br><span class="line">        while j &lt; len(s) :</span><br><span class="line">            if s[j] in d and d[s[j]] &gt; i:</span><br><span class="line">                i = d[s[j]]</span><br><span class="line">            else:</span><br><span class="line">            	long = max(long, j - i + 1)</span><br><span class="line">            d[s[j]] = j + 1</span><br><span class="line">            j += 1</span><br><span class="line">            </span><br><span class="line">        return long</span><br></pre></td></tr></table></figure>
+<p><strong>注</strong>： 测试的时候考虑字符串为空等临界条件。</p>
 
       
     </div>
@@ -466,7 +438,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/tools/" rel="tag"># tools</a>
+            <a href="/tags/string/" rel="tag"># string</a>
+          
+            <a href="/tags/hash-table/" rel="tag"># hash table</a>
+          
+            <a href="/tags/dynamic-programming/" rel="tag"># dynamic programming</a>
           
         </div>
       
@@ -479,15 +455,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/11/23/leetcode-addtwonumbers/" rel="next" title="LeetCode_Add Two Numbers">
+                <i class="fa fa-chevron-left"></i> LeetCode_Add Two Numbers
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/02/intent_slot/" rel="prev" title="Review on Intent Classification and Slot Filling">
-                Review on Intent Classification and Slot Filling <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -649,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo项目"><span class="nav-number">1.1.</span> <span class="nav-text">Hexo项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改主题"><span class="nav-number">1.2.</span> <span class="nav-text">修改主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加新的导航栏"><span class="nav-number">1.3.</span> <span class="nav-text">添加新的导航栏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署到-Github"><span class="nav-number">1.4.</span> <span class="nav-text">部署到 Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-收录博客网站"><span class="nav-number">1.5.</span> <span class="nav-text">Google 收录博客网站</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Longest-Substring-Without-Repeating-Characters"><span class="nav-number">1.</span> <span class="nav-text">Longest Substring Without Repeating Characters</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-暴力循环"><span class="nav-number">1.1.</span> <span class="nav-text">1. 暴力循环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-移动窗口-动态规划"><span class="nav-number">1.2.</span> <span class="nav-text">2. 移动窗口 / 动态规划</span></a></li></ol></li></ol></div>
             
 
           </div>

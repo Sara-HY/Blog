@@ -108,25 +108,27 @@
 
 
 
-  <meta name="description" content="让我们搭一个美美的博客，一起写写写吧~~~">
-<meta name="keywords" content="tools">
+  <meta name="description" content="Add Two NumbersYou are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbe">
+<meta name="keywords" content="medium,linked list,math">
 <meta property="og:type" content="article">
-<meta property="og:title" content="First Step to Establish the Blog">
-<meta property="og:url" content="https://sara-hy.github.io/2018/10/30/first_step/index.html">
+<meta property="og:title" content="LeetCode_Add Two Numbers">
+<meta property="og:url" content="https://sara-hy.github.io/2018/11/23/leetcode-addtwonumbers/index.html">
 <meta property="og:site_name" content="Sara">
-<meta property="og:description" content="让我们搭一个美美的博客，一起写写写吧~~~">
+<meta property="og:description" content="Add Two NumbersYou are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbe">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-16T05:17:29.774Z">
+<meta property="og:image" content="https://sara-hy.github.io/images/leetcode_2.png">
+<meta property="og:updated_time" content="2018-11-23T06:39:00.404Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="First Step to Establish the Blog">
-<meta name="twitter:description" content="让我们搭一个美美的博客，一起写写写吧~~~">
+<meta name="twitter:title" content="LeetCode_Add Two Numbers">
+<meta name="twitter:description" content="Add Two NumbersYou are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbe">
+<meta name="twitter:image" content="https://sara-hy.github.io/images/leetcode_2.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://sara-hy.github.io/2018/10/30/first_step/">
+  <link rel="canonical" href="https://sara-hy.github.io/2018/11/23/leetcode-addtwonumbers/">
 
 
 
@@ -136,7 +138,7 @@
   };
 </script>
 
-  <title>First Step to Establish the Blog | Sara</title>
+  <title>LeetCode_Add Two Numbers | Sara</title>
   
 
 
@@ -299,7 +301,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://sara-hy.github.io/2018/10/30/first_step/">
+    <link itemprop="mainEntityOfPage" href="https://sara-hy.github.io/2018/11/23/leetcode-addtwonumbers/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Sara Han">
@@ -316,7 +318,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">First Step to Establish the Blog
+          <h1 class="post-title" itemprop="name headline">LeetCode_Add Two Numbers
               
             
           </h1>
@@ -341,24 +343,12 @@
                 
               
 
-              <time title="Created: 2018-10-30 18:18:42" itemprop="dateCreated datePublished" datetime="2018-10-30T18:18:42+08:00">2018-10-30</time>
+              <time title="Created: 2018-11-23 11:59:43 / Modified: 14:39:00" itemprop="dateCreated datePublished" datetime="2018-11-23T11:59:43+08:00">2018-11-23</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-11-16 13:17:29" itemprop="dateModified" datetime="2018-11-16T13:17:29+08:00">2018-11-16</time>
               
             
           </span>
@@ -375,7 +365,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Note/" itemprop="url" rel="index"><span itemprop="name">Note</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
 
                 
                 
@@ -416,36 +406,17 @@
       
 
       
-        <p>让我们搭一个美美的博客，一起写写写吧~~~</p>
-<a id="more"></a> 
-<h2 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h2><p>​    brew, hexo, Node.js</p>
-<h3 id="Hexo项目"><a href="#Hexo项目" class="headerlink" title="Hexo项目"></a>Hexo项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init           <span class="comment"># 新建博客目录</span></span><br><span class="line">$ hexo new <span class="string">"postname"</span> <span class="comment"># 生成postname.md文件</span></span><br><span class="line">$ hexo clean          <span class="comment"># 清空生成的网页</span></span><br><span class="line">$ hexo generate       <span class="comment"># 根据当前目录下文件生成静态网页</span></span><br><span class="line">$ hexo server 	      <span class="comment"># 启动服务器</span></span><br></pre></td></tr></table></figure>
-<p>通过访问localhost:4000可以在本地调试。文件目录<code>source</code>下的<code>_posts</code>中可以添加用户新增加的博客内容（Markdown语法）。</p>
-<p>More info: <a href="https://hexo.io/docs/" target="_blank" rel="noopener">Heox</a></p>
-<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
-<p>修改<code>config.yml</code>配置文件中的theme属性，将其设置为next。另外常见的Next主题中常见的属性：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">auto_excerpt:   <span class="comment"># 可通过 &lt;!-- more --&gt; 标签自动截断, 增加阅读全文按钮。</span></span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  length: 150</span><br><span class="line"></span><br><span class="line">busuanzi_count: <span class="comment"># 监听网页浏览量。</span></span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="添加新的导航栏"><a href="#添加新的导航栏" class="headerlink" title="添加新的导航栏"></a>添加新的导航栏</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags   <span class="comment"># 添加tags标签页</span></span><br></pre></td></tr></table></figure>
-<p>修改<code>source</code>目录下的<code>tags</code>中的<code>index.md</code>如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-10-30 17:23:49</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-<p>在菜单中添加链接。编辑<code>config.yml</code>配置文件中的menu属性，如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  tags : /tags</span><br></pre></td></tr></table></figure>
-<h3 id="部署到-Github"><a href="#部署到-Github" class="headerlink" title="部署到 Github"></a>部署到 Github</h3><p>修改<code>config.yml</code>配置文件中的deploy属性：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git </span><br><span class="line">  repo: https://github.com/<span class="built_in">test</span>/test.github.io.git  <span class="comment"># github路径</span></span><br></pre></td></tr></table></figure>
-<p>通过下面的指令实现部署：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-<h3 id="Google-收录博客网站"><a href="#Google-收录博客网站" class="headerlink" title="Google 收录博客网站"></a>Google 收录博客网站</h3><ol>
-<li><p>添加站点：用自己的 Google 帐号登陆 <a href="https://www.google.com/webmasters/verification/home?hl=en" target="_blank" rel="noopener">Webmaster Central</a>。</p>
-</li>
-<li><p>验证站点: 将网站上的验证文件放在 <code>source</code> 文件下，在站点配置文件配置如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">skip_render: google10bb50e0b38f396b.html</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>产生 sitemap：借助  hexo-generator-sitemap 工具自动生成，并在<code>config.yml</code>里配置一下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save</span><br></pre></td></tr></table></figure>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sitemap:</span><br><span class="line">    path: sitemap.xml</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重新编译生成</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+        <h2 id="Add-Two-Numbers"><a href="#Add-Two-Numbers" class="headerlink" title="Add Two Numbers"></a><a href="https://leetcode.com/problems/add-two-numbers/" target="_blank" rel="noopener">Add Two Numbers</a></h2><p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in <strong>reverse order</strong> and each of their nodes contain a single digit. Add the two numbers and return it as a linked list. You may assume the two numbers do not contain any leading zero, except the number 0 itself.<br>（字符串/链表数值加法）</p>
+<a id="more"></a>
+<p><strong>Example:</strong> </p>
+<div align="center"><br>    <img src="/images/leetcode_2.png" width="500" align="center/"><br></div>
+
+<p>这道题是一个很典型的字符串 String 变数字 Number 例子，不过这里使用了<strong>链表</strong>的概念来表示组成数值的每个数字。</p>
+<h3 id="1-转换为数值计算"><a href="#1-转换为数值计算" class="headerlink" title="1. 转换为数值计算"></a>1. 转换为数值计算</h3><p>很直观的，我们可以将每一个链表转化为一个真实的数值，计算两者的和之后再将其转换为链表。其时间复杂度为 \(O(m + n)\)。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def list2num(self, l):</span><br><span class="line">        result = 0</span><br><span class="line">        j = 0</span><br><span class="line">        while l != None:</span><br><span class="line">            num =  10 ** j * l.val</span><br><span class="line">            result += num</span><br><span class="line">            l = l.next</span><br><span class="line">            j += 1 </span><br><span class="line">        return result</span><br><span class="line">    </span><br><span class="line">    def num2list(self, num):</span><br><span class="line">        if num == 0:</span><br><span class="line">            return ListNode(0)</span><br><span class="line">        l = ListNode(0)</span><br><span class="line">        p = l</span><br><span class="line">        while num != 0:</span><br><span class="line">            a = num % 10</span><br><span class="line">            num = num // 10</span><br><span class="line">            new_l = ListNode(a)</span><br><span class="line">            p.next = new_l</span><br><span class="line">            p = p.next </span><br><span class="line">        return l.next</span><br><span class="line">        </span><br><span class="line">    def addTwoNumbers(self, l1, l2):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type l1: ListNode</span><br><span class="line">        :type l2: ListNode</span><br><span class="line">        :rtype: ListNode</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        left = self.list2num(l1)</span><br><span class="line">        right = self.list2num(l2)</span><br><span class="line">        return self.num2list(left + right)</span><br></pre></td></tr></table></figure>
+<h3 id="2-加法器"><a href="#2-加法器" class="headerlink" title="2. 加法器"></a>2. 加法器</h3><p>我们可以将其看做一个加法器的过程，链表的从头到尾也就是加法器的从个位到最高位的过程，其中需要考虑到每一步加法计算的<strong>进位</strong>。其时间复杂度为 \(O(max(m + n))\)。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">class Solution:    </span><br><span class="line">    def addTwoNumbers(self, l1, l2):</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">        :type l1: ListNode</span><br><span class="line">        :type l2: ListNode</span><br><span class="line">        :rtype: ListNode</span><br><span class="line">        &quot;&quot;&quot;</span><br><span class="line">       </span><br><span class="line">        l = None</span><br><span class="line">        l3 = None</span><br><span class="line">        a = 0</span><br><span class="line">        </span><br><span class="line">        while l1 or l2 or a:</span><br><span class="line">            if l1:</span><br><span class="line">                a += l1.val</span><br><span class="line">                l1 = l1.next</span><br><span class="line">            if l2:</span><br><span class="line">                a +=l2.val</span><br><span class="line">                l2 = l2.next</span><br><span class="line">            if l3:</span><br><span class="line">                l3.next = ListNode(a % 10)</span><br><span class="line">                l3 = l3.next</span><br><span class="line">            else:</span><br><span class="line">                l3 = ListNode(a % 10)</span><br><span class="line">                l = l3</span><br><span class="line">            </span><br><span class="line">            a = a // 10</span><br><span class="line">        </span><br><span class="line">        return l</span><br></pre></td></tr></table></figure>
+<p><strong>注</strong>：“/”“//”在python中的作用不同。“/”表示浮点数除法，结果为浮点数；“//”结果为整除向下取整。</p>
 
       
     </div>
@@ -466,7 +437,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/tools/" rel="tag"># tools</a>
+            <a href="/tags/medium/" rel="tag"># medium</a>
+          
+            <a href="/tags/linked-list/" rel="tag"># linked list</a>
+          
+            <a href="/tags/math/" rel="tag"># math</a>
           
         </div>
       
@@ -479,14 +454,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/11/23/leetcode-twosum/" rel="next" title="LeetCode_Two Sum">
+                <i class="fa fa-chevron-left"></i> LeetCode_Two Sum
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/11/02/intent_slot/" rel="prev" title="Review on Intent Classification and Slot Filling">
-                Review on Intent Classification and Slot Filling <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/23/leetcode-LongestSubstringWithoutRepeatingCharacters/" rel="prev" title="LeetCode_Longest Substring Without Repeating Characters">
+                LeetCode_Longest Substring Without Repeating Characters <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -649,7 +628,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo项目"><span class="nav-number">1.1.</span> <span class="nav-text">Hexo项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改主题"><span class="nav-number">1.2.</span> <span class="nav-text">修改主题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加新的导航栏"><span class="nav-number">1.3.</span> <span class="nav-text">添加新的导航栏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署到-Github"><span class="nav-number">1.4.</span> <span class="nav-text">部署到 Github</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-收录博客网站"><span class="nav-number">1.5.</span> <span class="nav-text">Google 收录博客网站</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Add-Two-Numbers"><span class="nav-number">1.</span> <span class="nav-text">Add Two Numbers</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-转换为数值计算"><span class="nav-number">1.1.</span> <span class="nav-text">1. 转换为数值计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-加法器"><span class="nav-number">1.2.</span> <span class="nav-text">2. 加法器</span></a></li></ol></li></ol></div>
             
 
           </div>
