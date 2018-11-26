@@ -23,6 +23,8 @@ Assume we are dealing with an environment which could only store integers within
 	<img src="/images/leetcode_7.png" width = "500" align=center/>
 </div>
 
+
+### 1. 字符串翻转 
 ```
 class Solution:
     def reverse(self, x):
@@ -46,4 +48,34 @@ class Solution:
         return re
 ```
 
-**注**：超过有符号整形的范围时需要返回0。
+**注**：超过有符号整形的范围时需要返回0。另外`string[::-1]`也可以直接实现字符串的翻转。
+
+
+### 2. 整形翻转 
+```
+class Solution:
+    def reverse(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
+        
+        abso_x = abs(x)
+        result = 0
+        
+        while abso_x != 0 :
+            a = abso_x % 10
+            abso_x = abso_x // 10
+            result = result * 10  + a
+            
+        if x < 0:
+            result *= -1  
+            
+        if result > (pow(2, 31) - 1) or result < -pow(2, 31):
+            return 0
+        
+        return result
+```
+
+
+
