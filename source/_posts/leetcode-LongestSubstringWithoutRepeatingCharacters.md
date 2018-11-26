@@ -3,6 +3,7 @@ title: LeetCode_Longest Substring Without Repeating Characters
 date: 2018-11-23 14:33:59
 categories: LeetCode
 tags: 
+  - medium
   - string
   - hash table
   - dynamic programming

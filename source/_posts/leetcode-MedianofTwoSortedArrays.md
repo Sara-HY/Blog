@@ -3,6 +3,7 @@ title: LeetCode_Median of Two Sorted Arrays
 date: 2018-11-23 18:30:10
 categories: LeetCode
 tags: 
+  - hard
   - array
   - binary search
   - divide and conquer
