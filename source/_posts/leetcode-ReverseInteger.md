@@ -25,7 +25,7 @@ Assume we are dealing with an environment which could only store integers within
 
 
 ### 1. 字符串翻转 
-```
+```python
 class Solution:
     def reverse(self, x):
         """
@@ -52,7 +52,7 @@ class Solution:
 
 
 ### 2. 整形翻转 
-```
+```python
 class Solution:
     def reverse(self, x):
         """

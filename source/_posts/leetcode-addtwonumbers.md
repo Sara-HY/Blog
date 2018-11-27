@@ -27,7 +27,7 @@ You are given two non-empty linked lists representing two non-negative integers.
 
 很直观的，我们可以将每一个链表转化为一个真实的数值，计算两者的和之后再将其转换为链表。其时间复杂度为 \\(O(m + n)\\)。
 
-```
+```python
 class Solution:
     def list2num(self, l):
         result = 0
@@ -67,7 +67,7 @@ class Solution:
 
 我们可以将其看做一个加法器的过程，链表的从头到尾也就是加法器的从个位到最高位的过程，其中需要考虑到每一步加法计算的**进位**。其时间复杂度为 \\(O(max(m + n))\\)。
 
-```
+```python
 class Solution:    
     def addTwoNumbers(self, l1, l2):
         """

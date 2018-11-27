@@ -30,7 +30,7 @@ Assume we are dealing with an environment which could only store integers within
 ### 字符串过滤-正则表达式
 首先删除字符串首尾的空格，通过正则表达式过滤剩下以 "+-0123456789" 开头的句子，提取剩下的字符串首部的数字串，再将其转换为整形。（注意需要将超出范围的部分返回0。）
 
-```
+```python
 import re
 
 class Solution:

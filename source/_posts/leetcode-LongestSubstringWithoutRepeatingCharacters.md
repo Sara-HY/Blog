@@ -31,7 +31,7 @@ Given a string, find the length of the longest substring without repeating chara
 
 这道题是字符串中的很典型的 DP 问题。构建两个指针i和j，当指针j+1所指的元素在[i, j]中没有出现时，这时的字符串为[i, j+1]；当指针j+1所指的元素在[i, j]中有出现时，这时的字符串为[i+1, j]。另外，构建了一个字典来快速判断元素是否在子串中出现。其时间复杂度为 \\(O(2n)\\)。具体实现过程如下：
 
-```
+```python
 class Solution:
     def lengthOfLongestSubstring(self, s):
         """
@@ -56,7 +56,7 @@ class Solution:
 
 上面那个方法需要对整个字符串遍历两次，另外一种思路就是在字典dict中保存的是字符最后一次出现的下一个元素。指针j来遍历整个字符串，指针i来维护[0, j]中所有字符中最后一次出现的下一个元素，于是[i, j]就是最大不重复子串。其时间复杂度为 \\(O(n)\\)。具体实现过程如下：
 
-```
+```python
 class Solution:
     def lengthOfLongestSubstring(self, s):
         """

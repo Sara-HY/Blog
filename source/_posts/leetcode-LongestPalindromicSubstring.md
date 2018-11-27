@@ -28,7 +28,7 @@ Given a string **s**, find the longest palindromic substring in s. You may assum
 \\[ if s[i] == s[j]\ and\ dp[i+1][j-1] == 1,\ dp[i][j] = 1\\]
 
 然后我们可以找到满足dp[i][j] == 1的最长的序列。其时间复杂度为 \\(O(n^2)\\)，空间复杂度为 \\(O(n^2)\\)。具体实现过程如下：
-```
+```python
 class Solution:
     def longestPalindrome(self, s):
         """

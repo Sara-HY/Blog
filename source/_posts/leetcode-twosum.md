@@ -31,7 +31,7 @@ Given an array of integers, return indices of the two numbers such that they add
 
 (注：可以对数组进行两次遍历，第一次构建哈希表，第二次找答案。)
 
-```
+```python
 class Solution:
     def twoSum(self, nums, target):
         """

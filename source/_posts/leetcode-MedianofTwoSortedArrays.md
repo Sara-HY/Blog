@@ -24,7 +24,7 @@ There are two sorted arrays nums1 and nums2 of size m and n respectively. Find t
 
 ### 1. 分治法_1
 我们可以将中位数简单的理解成将数组分成两个部分，一部分中的数值总是大于另一部分。因此，我们可以看做是找\\((m+n)\\)个数中的第\\((m+n)/2\\)数值的大小（需要单独考虑\\((m+n)\\)的奇偶性）。其时间复杂度为 \\(O(log(m+n))\\)。具体实现过程如下：
-```
+```python
 class Solution:
     def findKth(self, nums1, nums2, k):
         if not nums1:
@@ -64,7 +64,7 @@ class Solution:
 
 ### 2. 分治法_2
 与上面的思路相同，但是不同的是找第 \\(k\\) 个值时，并不是直接将两个数组混合一起找第 \\(k\\) 个，而是以比较短的数组 A 为基准，找到符合条件的 \\(i\\)，使得 \\(A[i]\\) 和 \\(B[k-i]\\) 刚好满足其中一个是第\\(k\\)个数。其时间复杂度为 \\(O(log(min(m, n)))\\)。具体实现过程如下：
-```
+```python
 def findKth(self, nums1, nums2, k):
         len1 = len(nums1)
         len2 = len(nums2)

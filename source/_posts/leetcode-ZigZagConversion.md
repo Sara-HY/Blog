@@ -31,7 +31,7 @@ And then read line by line: "PAHNAPLSIIGYIR".
   - ZigZag的第 i 行字符的序号为 \\(k \* (2 \* numRows - 2) + i \\) ；
   - ZigZag的非第一行和最后一行的第 i 行的偶数个字符的序号是 \\((k + 1) \* (2 \* numRows - 2) - i \\)；
 其时间复杂度为 \\(O(n)\\)，具体实现过程如下：
-```
+```python
 class Solution:
     def convert(self, s, numRows):
         """
@@ -60,7 +60,7 @@ class Solution:
 
 ### 变步长遍历字符串
 这是一个十分巧妙的思路，仅仅只需要遍历一次字符串。题目的本质可以理解为将字符串分成 numRows 组，然后再连接起来。但是在遍历字符串时，需要根据 ZigZag 的形式来回的遍历，但实质也只遍历了一次。其时间复杂度为 \\(O(n)\\)，具体实现过程如下：
-```
+```python
 class Solution:
     def convert(self, s, numRows):
         """

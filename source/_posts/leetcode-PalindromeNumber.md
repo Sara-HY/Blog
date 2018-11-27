@@ -23,7 +23,7 @@ Determine whether an integer is a palindrome. An integer is a palindrome when it
 
 ### 字符串翻转
 
-```
+```python
 class Solution:
     def isPalindrome(self, x):
         """
