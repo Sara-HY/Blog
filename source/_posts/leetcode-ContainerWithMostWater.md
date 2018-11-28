@@ -25,7 +25,7 @@ Note: You may not slant the container and n is at least 2.
 
 
 ### 1. 暴力轮循
-双层循环遍历得到所有可能的矩形的面积。
+双层循环遍历得到所有可能的矩形的面积。很显然，该算法会 Time Limit Exceeded。其时间复杂度为 \\(O(n^2)\\)。具体实现过程如下：
 
 ```python
 class Solution:
@@ -45,7 +45,7 @@ class Solution:
 ```
 
 ### 2. 头尾指针
-在数组的收尾分别维护一个指针，过程中将高度较低的指针向中间移动。
+在数组的收尾分别维护一个指针，过程中将高度较低的指针向中间移动。其时间复杂度为 \\(O(n)\\)。具体实现过程如下：
 
 ```python
 class Solution:
