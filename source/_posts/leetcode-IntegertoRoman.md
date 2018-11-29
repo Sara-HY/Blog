@@ -28,7 +28,6 @@ Roman numerals are usually written largest to smallest from left to right. Howev
 	<img src="/images/leetcode_12.png" width = "500" align=center/>
 </div>
 
-
 ### 1. 基数扩展
 由于 "4" 和 "9" 的特殊性，我们可以将其也包含在基数列表中，于是基数可以是1，4，5，9，10，40，50，90，100，400，500，900。具体实现过程如下：
 ```python
@@ -83,7 +82,3 @@ class Solution:
     
         return M[num//1000] + C[(num%1000)//100] + X[(num%100)//10] + I[num%10]
 ```
-
-
-
-
