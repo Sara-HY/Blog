@@ -86,22 +86,19 @@ def findKth(self, nums1, nums2, k):
             return self.findKth(nums1[i:], nums2[:j], j)
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### 3. Sort()函数
+```python
+class Solution:
+    def findMedianSortedArrays(self, nums1, nums2):
+        """
+        :type nums1: List[int]
+        :type nums2: List[int]
+        :rtype: float
+        """
+        num = sorted(nums1 + nums2)
+        l = len(num)
+        if l%2 == 0:
+            return((num[l//2] + num[l//2-1])/2)
+        if l%2 != 0:
+            return(num[l//2])
+```

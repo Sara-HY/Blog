@@ -84,7 +84,7 @@ class Solution:
         """
         n = len(strs)
         if n == 0:
-            return ''
+            return ""
         elif n == 1:
             return strs[0]
         length = min([len(s) for s in strs])
@@ -94,5 +94,5 @@ class Solution:
             if len(set(substrings)) == 1:
                 return substrings[0]
             length -= 1
-        return ''
+        return ""
 ```
