@@ -12,7 +12,7 @@ tags:
 ## [4Sum](hhttps://leetcode.com/problems/4sum/)
 
 Given an array nums of n integers and an integer target, are there elements a, b, c, and d in nums such that a + b + c + d = target? Find all unique quadruplets in the array which gives the sum of target.
-（寻找数组中四个数的和为target的一个组合）
+（寻找数组中四个数的和为target的组合）
 
 <!--more-->
 
