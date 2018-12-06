@@ -53,7 +53,7 @@ class Solution:
 ```
 
 ### 2. 动态规划
-dp[i][j] 表示 s 的前 i 个字符和 p 的前 j 个字符是否匹配，具体 dp 迭代更新与上述相同。其中 `j >= 2 and dp[i][j-2]` 表示扩展当前的 \* ，`i >= 1 and j >= 2 and dp[i-1][j] and p[j-2] in {s[i-1], '.'}` 表示扩展当前的 \* 。
+dp[i][j] 表示 s 的前 i 个字符和 p 的前 j 个字符是否匹配，具体 dp 迭代更新与上述相同。其中 `j >= 2 and dp[i][j-2]` 表示不扩展当前的 \* ，即认为此次匹配了0个。 `i >= 1 and j >= 2 and dp[i-1][j] and p[j-2] in {s[i-1], '.'}` 表示扩展当前的 \* ，即认为此次匹配了1个。
 
 ```python
 class Solution:
