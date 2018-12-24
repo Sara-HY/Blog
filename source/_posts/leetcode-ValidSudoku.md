@@ -20,7 +20,7 @@ Determine if a 9x9 Sudoku board is valid. Only the filled cells need to be valid
 	<img src="/images/leetcode_36_1.png" width = "300" align=center/>
 </div>
 
-Note:
+**Note:**
 1. A Sudoku board (partially filled) could be valid but is not necessarily solvable.
 2. Only the filled cells need to be validated according to the mentioned rules.
 3. The given board contain only digits 1-9 and the character '.'.
