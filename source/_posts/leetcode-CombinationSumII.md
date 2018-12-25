@@ -25,7 +25,6 @@ Given a collection of candidate numbers (candidates) and a target number (target
 	<img src="/images/leetcode_40.png" width = "500" align=center/>
 </div>
 
-
 ### 1. 回溯法
 
 这道题与上一题的区别在于：
