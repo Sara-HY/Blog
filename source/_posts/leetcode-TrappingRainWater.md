@@ -1,5 +1,5 @@
 ---
-title: leetcode_Trapping Rain Water
+title: LeetCode_Trapping Rain Water
 date: 2018-12-26 11:00:07
 categories: LeetCode
 tags: 
