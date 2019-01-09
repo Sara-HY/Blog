@@ -15,6 +15,8 @@ tags:
 Given an input string (s) and a pattern (p), implement wildcard pattern matching with support for “?” and “\*”.
 (通配符匹配)
 
+<!--more-->
+
 “?” Matches any single character.
 “\*” Matches any sequence of characters (including the empty sequence).
 The matching should cover the entire input string (not partial).
@@ -27,7 +29,6 @@ The matching should cover the entire input string (not partial).
 <div align=center>
 	<img src="/images/leetcode_44.png" width = "500" align=center/>
 </div>
-
 
 ### 1. 动态规划
 
