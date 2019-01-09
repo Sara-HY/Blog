@@ -5,7 +5,7 @@ categories: LeetCode
 tags: 
   - medium
   - string
-  - backtracking
+  - back tracking
 ---
 
 ## [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
