@@ -37,7 +37,7 @@ class Solution:
         for item in nums:
             new_nums = [num for num in nums if num != item]
             result = self.permute(new_nums)
-            if len(result) == 1:
+            if len(result[0]) == 1:
                 results.append([item, result[0][0]])
             else:
                 for _list in result:
