@@ -1,6 +1,6 @@
 ---
-title: LeetCode_N-Queens
-date: 2019-01-09 15:26:07
+title: LeetCode_N-Queens II
+date: 2019-01-09 22:06:26
 categories: LeetCode
 tags: 
   - hard
@@ -10,7 +10,7 @@ tags:
 ## [N-Queens](https://leetcode.com/problems/n-queens/)
 
 The n-queens puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
-(N皇后的问题，求所有解)
+(N皇后的问题，求解个数)
 
 <div align=center>
 	<img src="/images/leetcode_51_1.png" width = "200" align=center/>
@@ -26,9 +26,8 @@ Given an integer n, return all distinct solutions to the n-queens puzzle. Each s
 	<img src="/images/leetcode_51.png" width = "500" align=center/>
 </div>
 
-
 ### 1. 回溯法
-类似于这种解空间可以用树表示，且存在某种约束条件的问题可以用回溯法求解。具体实现过程如下：
+与前一题方法相同，只需将具体的解法保存。具体实现过程如下：
 
 ```python
 import copy
@@ -44,10 +43,7 @@ class Solution:
 
 	def dfs(self, i, matrix):
 		if (i == self.n):
-			result = []
-			for row in matrix:
-				result.append(''.join(row))
-			self.result.append(result)
+			self.count += 1
 		else:
 			for j in range(self.n):
 				if self.check(matrix, i, j):
@@ -55,21 +51,16 @@ class Solution:
 					self.dfs(i+1, matrix)
 					matrix[i][j] = '.'
 	
-	def solveNQueens(self, n):
+	def totalNQueens(self, n):
 		"""
 		:type n: int
 		:rtype: List[List[str]]
 		"""
 		self.n = n
-		self.result = []
+		self.count = 0
 
 		matrix = [['.' for _ in range(self.n)] for _ in range(self.n)]
 
 		self.dfs(0, matrix)
-		return self.result
+		return self.count
 ```
-
-
-
-
-
