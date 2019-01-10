@@ -66,4 +66,8 @@ class Solution:
         result = min(result, INT_MAX)  
         return result
 ```
-**注**：需要考虑 \\(+/- \\) 出现在数字字符串中间的部分，因此 '0-1' 需要通过`if i != 0 and (char == '+' or char == '-')`过滤掉。
+**注**：需要考虑 \\(+/- \\) 出现在数字字符串中间的部分，因此 '0-1' 需要通过`if i != 0 and (char == '+' or char == '-')`过滤掉。当然，也可以直接通过match的group()函数，其返回值为匹配的字符串，进而获取开始的数值字符串。
+
+```python
+num_string = re.match(r'^(\-|\+)?\d+', string).group()
+```
