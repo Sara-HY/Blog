@@ -7,7 +7,7 @@ tags:
   - back tracking
 ---
 
-## [N-Queens](https://leetcode.com/problems/n-queens/)
+## [N-Queens II](https://leetcode.com/problems/n-queens-ii/)
 
 The n-queens puzzle is the problem of placing n queens on an n×n chessboard such that no two queens attack each other.
 (N皇后的问题，求解个数)
@@ -23,7 +23,7 @@ Given an integer n, return all distinct solutions to the n-queens puzzle. Each s
 **Example:**
 
 <div align=center>
-	<img src="/images/leetcode_51.png" width = "500" align=center/>
+	<img src="/images/leetcode_52.png" width = "500" align=center/>
 </div>
 
 ### 1. 回溯法
