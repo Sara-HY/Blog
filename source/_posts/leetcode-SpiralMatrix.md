@@ -21,7 +21,7 @@ Given a matrix of m x n elements (m rows, n columns), return all elements of the
 </div>
 
 ### 1. 方向模拟
-实现定义四个方向，按照题中的螺旋式的方向在遍历矩阵过程中遇到边界时不断的修改方向并，修改新的边界。具体实现过程如下：
+事先定义四个方向，按照题中的螺旋式的方向在遍历矩阵，过程中遇到边界时不断的修改方向并修改新的边界。具体实现过程如下：
 
 ```python
 class Solution:
