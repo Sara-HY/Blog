@@ -38,8 +38,8 @@ class Solution:
 
         for i in range(m):
             for j in range(n):
-            	if i==0 and j==0:
-            		dp[i][j] = grid[i][j]
+                if i==0 and j==0:
+                    dp[i][j] = grid[i][j]
                 elif i==0:
                     dp[i][j] = dp[i][j-1] + grid[i][j]
                 elif j==0:
