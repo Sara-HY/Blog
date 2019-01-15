@@ -18,7 +18,7 @@ A robot is located at the top-left corner of a m x n grid (marked 'Start' in the
 **Example:** 
 
 <div align=center>
-	<img src="/images/leetcode_62.png" width = "500" align=center/>
+	<img src="/images/leetcode_63.png" width = "500" align=center/>
 </div>
 
 ### 1. 动态规划
