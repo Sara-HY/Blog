@@ -11,7 +11,7 @@ tags:
 ## [Plus One](https://leetcode.com/problems/plus-one/)
 
 Given a non-empty array of digits representing a non-negative integer, plus one to the integer. The digits are stored such that the most significant digit is at the head of the list, and each element in the array contain a single digit. You may assume the integer does not contain any leading zero, except the number 0 itself.
-（寻找4个数组中四个数的和为0的组合个数）
+（数组形式的数字串数值加1）
 
 <!--more-->
 
