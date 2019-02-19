@@ -9,10 +9,14 @@ tags:
 
 ## [Text Justification](https://leetcode.com/problems/text-justification/)
 
-Given a linked list, swap every two adjacent nodes and return its head.
 （文本左右对齐）
 
 <!--more-->
+
+**Note:**
+1. A word is defined as a character sequence consisting of non-space characters only.
+2. Each word's length is guaranteed to be greater than 0 and not exceed maxWidth.
+3. The input array words contains at least one word.
 
 **Example:**
 
