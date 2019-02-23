@@ -7,7 +7,7 @@ tags:
   - back tracking
 ---
 
-## [Combinations](https://leetcode.com/problems/minimum-window-substring/)
+## [Combinations](https://leetcode.com/problems/combinations/)
 
 Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
 （列举 C_n^k 的所有组合）
