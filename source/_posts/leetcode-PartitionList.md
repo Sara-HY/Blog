@@ -81,9 +81,3 @@ class Solution:
         p_r.next = None
         return l_head.next
 ```
-
-
-
-
-
-

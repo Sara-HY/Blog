@@ -4,7 +4,7 @@ date: 2018-12-21 21:42:03
 categories: LeetCode
 tags: 
   - hard
-  - hashed table
+  - hash table
   - back tracking
 ---
 

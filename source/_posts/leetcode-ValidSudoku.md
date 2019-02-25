@@ -4,7 +4,7 @@ date: 2018-12-21 20:56:51
 categories: LeetCode
 tags: 
   - medium
-  - hashed table
+  - hash table
 ---
 
 ## [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
