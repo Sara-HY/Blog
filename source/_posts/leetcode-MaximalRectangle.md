@@ -1,7 +1,7 @@
 ---
 title: LeetCode_Maximal Rectangle
 date: 2019-02-25 10:56:42
-ategories: LeetCode
+categories: LeetCode
 tags: 
   - hard
   - array
