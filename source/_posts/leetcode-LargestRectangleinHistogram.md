@@ -18,7 +18,7 @@ Given n non-negative integers representing the histogram's bar height where the 
 **Example:** 
 
 <div align=center>
-	<img src="/images/leetcode_83.png" width = "500" align=center/>
+	<img src="/images/leetcode_84.png" width = "500" align=center/>
 </div>
 
 ### 1. 堆栈
@@ -27,7 +27,7 @@ Given n non-negative integers representing the histogram's bar height where the 
 **Note:**
 1. 在 heights 尾部增加一个 “0” 是为了防止在数组尾部的最后一个升序序列没有计算，如[3, 4, 1, 3, 5, 7]。
 2. stack 存储的是 index 是为了方便计算矩形的 width。
-
+3. 可以事先维护 stack 为 [-1]，这样就不用考虑单独 stack 为空的情况了。
 
 ```python
 class Solution:
