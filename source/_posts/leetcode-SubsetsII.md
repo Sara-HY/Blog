@@ -21,7 +21,7 @@ Given a collection of integers that might contain duplicates, nums, return all p
 **Example:** 
 
 <div align=center>
-	<img src="/images/leetcode_78.png" width = "500" align=center/>
+	<img src="/images/leetcode_90.png" width = "500" align=center/>
 </div>
 
 ### 1. 回溯法 / DFS
