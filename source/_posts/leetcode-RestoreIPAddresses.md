@@ -40,6 +40,15 @@ class Solution:
             # string[:j+1]长度为1 或 string[:j+1]长度大于1但不能以0开头
             and (j+1 < 2 or (j+1 >= 2 and string[0] != '0')):
                     self.dfs(string[j+1:], part + [string[:j+1]], count + 1)
+
+        # for i in range(1, 4):
+        #     if i <= len(string):
+        #         if i == 1:
+        #             self.dfs(string[i:], part + [string[:i]], count + 1)
+        #         if i==2 and string[0] != '0':
+        #             self.dfs(string[i:], part + [string[:i]], count + 1)
+        #         if i==3 and string[0] != '0' and int(string[:3]) <= 255 :
+        #             self.dfs(string[i:], part + [string[:i]], count + 1)
     
     def restoreIpAddresses(self, s: str) -> List[str]:
         if not s or len(s) > 12:
@@ -47,6 +56,5 @@ class Solution:
         self.results = []
         self.dfs(s, [], 0)
         
-        return self.results
         return self.results
 ```
