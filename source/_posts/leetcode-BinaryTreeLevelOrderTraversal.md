@@ -22,7 +22,7 @@ Given a binary tree, return the level order traversal of its nodes' values. (ie,
 </div>
 
 ### 1. 递归
-按层遍历，每次都吧同层的树节点 Node 组合成一个 List 输入到队列。（变形之后的BFS）。
+按层遍历，每次都把同层的树节点 Node 组合成一个 List 输入到队列。（变形之后的BFS）。
 
 ```python
 # Definition for a binary tree node.
