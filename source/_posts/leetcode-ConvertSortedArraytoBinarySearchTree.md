@@ -22,7 +22,7 @@ Given an array where elements are sorted in ascending order, convert it to a hei
 </div>
 
 ### 1. 递归
-根据平衡二叉树的定义：二叉搜索树 + height差不大于1。因此从中间开始建立为根节点，左边的有序数组构建左子树，右边的有序数组构建右子树。具体实现过程如下：
+根据平衡二叉树的定义：height差不大于1。因此从中间开始建立为根节点，左边的有序数组构建左子树，右边的有序数组构建右子树。具体实现过程如下：
 
 ```python
 # Definition for a binary tree node.
