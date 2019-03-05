@@ -21,8 +21,8 @@ Given a binary tree, flatten it to a linked list in-place.
 	<img src="/images/leetcode_114.png" width = "500" align=center/>
 </div>
 
-### 1. 
-
+### 1. 递归
+递归压平子树，然后将左子树放在右子树上，**并将左子树置为None**。然后找到叶子节点将原来的右子树连接在后面。具体实现过程如下：
 
 ```python
 # Definition for a binary tree node.
