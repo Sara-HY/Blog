@@ -64,8 +64,8 @@ class Solution:
 ```
 
 
-<!-- ### 2. 迭代 -->
-<!-- 
+### 2. 迭代
+根据 BFS 进行层次遍历，具体实现过程如下：
 
 ```python
 """
@@ -79,20 +79,33 @@ class Node:
 """
 class Solution:
     def connect(self, root: 'Node') -> 'Node':
-        tail = dummy = Node(0, None, None, None)
+        if not root:
+            return None
+    
+        queue = [[root]]
+    
+        while queue:
+            top = queue.pop()
+            level_node = []
+            
+            pre = None
+            for node in top:
+                if node.left:
+                    level_node.append(node.left)
+                    if not pre:
+                        pre = node.left
+                    else:
+                        pre.next = node.left
+                        pre = node.left
+                if node.right:
+                    level_node.append(node.right)
+                    if not pre:
+                        pre = node.right
+                    else:
+                        pre.next = node.right
+                        pre = node.right
+            if level_node:
+                queue.insert(0, level_node)        
         
-        p = root
-        while p:
-            tail.next = p.left
-            if tail.next:
-                tail = tail.next
-            tail.next = p.right
-            if tail.next:
-                tail = tail.next
-            p = p.next
-            if not p:
-                tail = dummy
-                p = dummy.next
-       
         return root
-``` -->
+```

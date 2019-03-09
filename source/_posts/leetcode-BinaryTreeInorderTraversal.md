@@ -4,7 +4,7 @@ date: 2019-02-27 12:14:02
 categories: LeetCode
 tags: 
   - medium
-  - hashed table
+  - hash table
   - stack
   - tree
 ---
