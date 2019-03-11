@@ -21,7 +21,7 @@ Given a non-negative integer numRows, generate the first numRows of Pascal's tri
 	<img src="/images/leetcode_118.png" width = "500" align=center/>
 </div>
 
-### 1. 组成生成
+### 1. 逐层生成
 根据杨辉三角的规律，组成生成杨辉三角，具体实现过程如下：
 
 ```python
