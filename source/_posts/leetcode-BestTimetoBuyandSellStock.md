@@ -10,7 +10,7 @@ tags:
 
 ## [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
-Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete at most one transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit. Note that you cannot sell a stock before you buy one.
+Say you have an array for which the ith element is the price of a given stock on day i. If you were only permitted to complete **at most one** transaction (i.e., buy one and sell one share of the stock), design an algorithm to find the maximum profit. Note that you cannot sell a stock before you buy one.
 （股票收益）
 
 <!--more-->
@@ -25,7 +25,7 @@ Say you have an array for which the ith element is the price of a given stock on
 类似于插入排序的方法，外层 i 从 [0,n-1） 循环，内层 j 从 [i+1, n） 循环，获取遍历过程中的最大值。
 
 
-### 2. 单重循环
+### 2. 单重循环 & 动态规划
 只进行一次遍历，在遍历过程中发现价格小于买入的价格时，修改最低价表示买入；当收益大于最大收益时，修改最大收益值。（这里使用elif 是因为买入必须在卖掉之前。）具体实现过程如下：
 
 ```python
