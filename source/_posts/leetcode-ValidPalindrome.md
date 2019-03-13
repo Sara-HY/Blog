@@ -50,4 +50,15 @@ class Solution:
 ```
 
 
+### 2.翻转
+判断翻转后的字符串与原来是是否一致，空间复杂度是 O(n) 。具体实现过程如下：
+
+```python
+class Solution:
+	def isPalindrome(self, s: str) -> bool:
+        s = s.lower()
+        s = ''.join([t for t in s if t.isalnum()])
+        return s == s[::-1]
+```
+
 
