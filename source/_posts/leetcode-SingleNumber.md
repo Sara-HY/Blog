@@ -11,7 +11,7 @@ tags:
 ## [Single Number](https://leetcode.com/problems/single-number/)
 
 Given a non-empty array of integers, every element appears twice except for one. Find that single one.
-（只出现一次的数字）
+（只出现一次的数字(其余出现两次)）
 
 <!--more-->
 
