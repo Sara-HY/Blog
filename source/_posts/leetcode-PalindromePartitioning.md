@@ -26,9 +26,7 @@ Given a string s, partition s such that every substring of the partition is a pa
 ```python
 class Solution:
     def checking(self, string):
-        if string[::-1] == string:
-            return True
-        return False
+        return string[::-1] == string
     
     def back_tracking(self, s, res, start):
         if start == len(s) and len(res) > 0:
@@ -36,8 +34,7 @@ class Solution:
         for i in range(start, len(s)):
             if self.checking(s[start:i+1]):
                 self.back_tracking(s, res+[s[start:i+1]], i+1)
-          
-            
+                  
     def partition(self, s: str) -> List[List[str]]:
         if not s:
             return []
