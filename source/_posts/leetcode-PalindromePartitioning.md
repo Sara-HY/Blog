@@ -4,7 +4,7 @@ date: 2019-03-14 10:34:52
 categories: LeetCode
 tags: 
   - medium
-  - backtracking
+  - back tracking
 ---
 
 ## [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
