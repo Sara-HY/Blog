@@ -56,7 +56,7 @@ class Solution(object):
 ```
 
 ### 2. 双指针
-使用两个指针 slow 和 fast，在遍历链表的过程中，slow 移动一步，fast 移动两步。若存在环，两者一定会在某处相遇，具体实现过程如下：
+使用两个指针 slow 和 fast，在遍历链表的过程中，slow 移动一步，fast 移动两步。若存在环，两者一定会在某处相遇（在两者都进入环之后，fast一定会追赶上slow）。时间复杂度为 O(n)，空间复杂度为 O(1)。具体实现过程如下：
 
 ```python
 # Definition for singly-linked list.
