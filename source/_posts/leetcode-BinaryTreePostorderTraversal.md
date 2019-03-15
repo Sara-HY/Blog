@@ -1,6 +1,6 @@
 ---
-title: LeetCode_Binary Tree Preorder Traversal
-date: 2019-03-15 14:22:32
+title: LeetCode_Binary Tree Postorder Traversal
+date: 2019-03-15 14:52:48
 categories: LeetCode
 tags: 
   - medium
@@ -8,10 +8,10 @@ tags:
   - tree
 ---
 
-## [Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)
+## [Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)
 
-Given a binary tree, return the preorder traversal of its nodes' values.
-（先序遍历二叉树）
+Given a binary tree, return the postorder traversal of its nodes' values.
+（后序遍历二叉树）
 
 <!--more-->
 
@@ -20,7 +20,7 @@ Given a binary tree, return the preorder traversal of its nodes' values.
 **Example:** 
 
 <div align=center>
-	<img src="/images/leetcode_144.png" width = "500" align=center/>
+	<img src="/images/leetcode_145.png" width = "500" align=center/>
 </div>
 
 ### 1. 递归
@@ -38,18 +38,19 @@ class Solution(object):
     def helper(self, root, res):
         if not root:
             return res
-        res.append(root.val)
+        
         self.helper(root.left, res)
         self.helper(root.right, res)
+        res.append(root.val)
         
-    def preorderTraversal(self, root):
+    def postorderTraversal(self, root):
         """
         :type root: TreeNode
         :rtype: List[int]
         """
         if not root:
-            return []
-        
+        	return []
+
         result = []
         self.helper(root, result)
         
@@ -57,7 +58,7 @@ class Solution(object):
 ```
 
 ### 2. 迭代 & 栈
-先将访问根节点，然后将右子树节点加入到栈中，然后访问左子树。具体实现方法如下：
+由于先序遍历的顺序是根-左-右，后序遍历的顺序是左-右-根，因此可以修改先序遍历的遍历顺序为根-右-左，然后将最终结果倒序即可。具体实现方法如下：
 
 ```python
 # Definition for a binary tree node.
@@ -68,23 +69,23 @@ class Solution(object):
 #         self.right = None
 
 class Solution(object):
-    def preorderTraversal(self, root):
+    def postorderTraversal(self, root):
         """
         :type root: TreeNode
         :rtype: List[int]
         """
         if not root:
             return []
-        
         result, stack = [], []
         p = root
+        
         while stack or p:
             if p:
                 result.append(p.val)
-                stack.append(p.right)
-                p = p.left
+                stack.append(p.left)
+                p = p.right
             else:
                 p = stack.pop()
-        
-        return result
+                
+        return result[::-1]
 ```
