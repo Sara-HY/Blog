@@ -68,9 +68,8 @@ class Solution:
     def inorderTraversal(self, root: TreeNode) -> List[int]:   
         if not root:
             return []
-        results = []
-        stack = []
         
+        results, stack = [], []
         p = root
         while stack or p:
             while p:
