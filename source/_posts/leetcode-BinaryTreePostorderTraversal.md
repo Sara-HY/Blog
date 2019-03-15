@@ -3,7 +3,7 @@ title: LeetCode_Binary Tree Postorder Traversal
 date: 2019-03-15 14:52:48
 categories: LeetCode
 tags: 
-  - medium
+  - hard
   - stack
   - tree
 ---
