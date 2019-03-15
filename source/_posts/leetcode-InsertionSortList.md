@@ -38,7 +38,7 @@ class Solution(object):
         :rtype: ListNode
         """
         if not head or not head.next:
-            return 
+            return head
         
         new_head = ListNode(-1)
     
