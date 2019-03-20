@@ -11,7 +11,7 @@ tags:
 ## [3Sum Closest](https://leetcode.com/problems/3sum-closest/)
 
 Given an array nums of n integers and an integer target, find three integers in nums such that the sum is closest to target. Return the sum of the three integers. You may assume that each input would have exactly one solution.
-（寻找数组中三个数的和为target的一个组合）
+（寻找数组中三个数的和最接近target的一个组合）
 
 <!--more-->
 
