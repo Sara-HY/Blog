@@ -200,4 +200,4 @@ class Solution:
                 self.backtrack(result, trace, [word] + path, prev)
 ```
 
-**Note:** 这里dictionary = set(wordList)很重要，不然也会超时(Time Limit Exceeded)。set和lsit可以自由转换，在删除list中多个/海量重复元素时，可以先转换成set，然后再转回list并排序(set没有排序)，此种方法不仅方便且效率较高。
+**Note:** 这里dictionary = set(wordList)很重要，不然也会超时(Time Limit Exceeded)。set和list可以自由转换，在删除list中多个/海量重复元素时，可以先转换成set，然后再转回list并排序(set没有排序)，此种方法不仅方便且效率较高。
