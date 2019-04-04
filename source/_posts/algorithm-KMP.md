@@ -1,7 +1,7 @@
 ---
 title: Algorithm_KMP
 date: 2019-04-03 17:14:38
-categories: algorithm
+categories: Algorithm
 tags: 
   - string
 ---
