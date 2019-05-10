@@ -27,3 +27,23 @@ Linux 终端指令总结。
 ```bash
 cat words.txt | tr -s ' ' '\n' | sort | uniq -c | sort -r | awk '{print $2, $1}'
 ```
+
+
+### 2. 输出第 N 行
+
+**Example:** 
+
+<div align=center>
+	<img src="/images/leetcode_192.png" width = "500" align=center/>
+</div>
+
+* sed : -n，只打印匹配的行
+
+
+```bash
+sed -n 10p file.txt
+```
+
+
+
+
