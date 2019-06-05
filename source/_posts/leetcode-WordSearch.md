@@ -1,7 +1,7 @@
 ---
 title: LeetCode_Word Search
 date: 2019-02-23 14:51:49
-ategories: LeetCode
+categories: LeetCode
 tags: 
   - medium
   - array
@@ -22,10 +22,6 @@ Given a 2D board and a word, find if the word exists in the grid. The word can b
 </div>
 
 ### 1. 回溯法 / DFS
-
-
-
-
 
 ```python
 class Solution:
