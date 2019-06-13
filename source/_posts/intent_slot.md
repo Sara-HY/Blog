@@ -176,7 +176,7 @@ session ID    用户query              意图                       语义槽标
 
 ### [DSTC](https://www.microsoft.com/en-us/research/event/dialog-state-tracking-challenge/) (Dialog State Tracking Challenge) [6, 7]
 
-#### 数据描述
+#### [数据描述](https://pdfs.semanticscholar.org/4ba3/39bd571585fadb1fb1d14ef902b6784f574f.pdf)
 DSTC 是针对一系列的对话数据，完成对话跟踪的任务。也就是针对每一个数据集，意在可以根据之前的状态来预测新的对话的状态。目前DSTC数据已经更新到DSCT6，下面将简单介绍各个版本的数据。
 - DSTC 1
  这个数据集包括城市BUS的预定电话中的对话数据。**12963**轮训练数据，**2485**轮测试数据。
