@@ -29,5 +29,17 @@ Find all possible combinations of **k** numbers that add up to a number **n**, g
 
 
 ```python
-
+class Solution:
+    def back_tracking(self, list, i, k, count):
+        if count == 0 and k == 0:
+            self.results.append(list)
+        
+        for j in range(i, 10):
+            self.back_tracking(list+[j], j+1, k-1, count-j)
+        
+    def combinationSum3(self, k: int, n: int) -> List[List[int]]:
+        self.results = []
+        self.back_tracking([], 1, k, n)
+        
+        return self.results
 ```
