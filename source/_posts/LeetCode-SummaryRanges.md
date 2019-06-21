@@ -50,7 +50,7 @@ class Solution:
         return results
 ```
 
-### 1. 直接统计range
+### 2. 直接统计range
 在遍历数组的过程中不断地更新统计中range的右界，具体实现过程如下：
 
 ```python
