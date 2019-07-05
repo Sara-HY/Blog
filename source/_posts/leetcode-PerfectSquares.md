@@ -1,5 +1,5 @@
 ---
-title: leetcode_Perfect Squares
+title: Leetcode_Perfect Squares
 date: 2019-06-30 22:10:32
 categories: LeetCode
 tags: 

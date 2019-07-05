@@ -1,5 +1,5 @@
 ---
-title: leetcode_Ugly Number II
+title: Leetcode_Ugly Number II
 date: 2019-06-30 17:01:13
 categories: LeetCode
 tags: 
