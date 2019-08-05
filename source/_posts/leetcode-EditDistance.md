@@ -27,7 +27,7 @@ You have the following 3 operations permitted on a word:
 </div>
 
 
-### 动态规划
+### 动态规划 时间复杂度 O(n^2) 空间间复杂度 O(n^2)
 很明显的动态规划的题目，问题就在于需要分类讨论。具体的讨论情况在code的注释部分有详细解释。
 
 ```python
@@ -56,4 +56,32 @@ class Solution:
                 
         # return dp[len2][len1]
         return dp[-1][-1]
+```
+
+### 动态规划 时间复杂度 O(n^2) 空间间复杂度 O(n^2)
+
+```python
+class Solution:
+    def minDistance(self, word1: 'str', word2: 'str') -> 'int':
+        len1 = len(word1)
+        len2 = len(word2)
+        
+        # Create a table to store results of subproblems 
+        dp = [0 for _ in range(len2 + 1)] 
+ 
+        for j in range(len2 + 1):
+            dp[j] = j
+
+        for i in range(1, len1 + 1):
+            prev = i
+            for j in range(1, len2 + 1):
+                if word1[i-1] == word2[j-1]:
+                    cur = dp[j-1]
+                else:
+                    cur = min(dp[j-1], dp[j], prev) + 1
+                dp[j-1] = prev
+                prev = cur  
+            dp[len2] = prev
+            
+        return dp[len2]
 ```
