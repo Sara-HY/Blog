@@ -58,7 +58,7 @@ class Solution:
         return dp[-1][-1]
 ```
 
-### 动态规划 时间复杂度 O(n^2) 空间间复杂度 O(n^2)
+### 动态规划 时间复杂度 O(n^2) 空间间复杂度 O(n)
 
 ```python
 class Solution:
