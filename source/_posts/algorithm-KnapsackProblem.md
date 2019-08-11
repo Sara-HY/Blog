@@ -11,6 +11,8 @@ tags:
 
 ## [Knapsack Problem](https://zh.wikipedia.org/wiki/%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98)
 
+背包问题
+
 <!--more-->
 
 背包问题（Knapsack problem）是一种组合优化的 NP 完全问题。问题可以描述为：给定一组物品，每种物品都有自己的重量和价格，在限定的总重量内，我们如何选择才能使得物品的总价格最高。
