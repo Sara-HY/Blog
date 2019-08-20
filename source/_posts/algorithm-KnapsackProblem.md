@@ -98,7 +98,7 @@ return max(map(max, dp))
 
 给定一些物品数组和一个目标值，问有多少种可以组成目标的组合数，比如给定物品数组 [2,3,6,7] 和目标值 7 （2种可能）。可以考虑使用动态规划：
 dp[n][C] 表示从前i中里面组成 C 的组合数，则
-dp[n][C] = dp[n-1][C] + dp[n-1][C-values[n-1]\* 1] + dp[n-2][C-values[n-1]\* 2] + ...
+dp[n][C] = dp[n-1][C] + dp[n-1][C-values[n-1]\* 1] + dp[n-1][C-values[n-1]\* 2] + ...
 
 
 ```python
